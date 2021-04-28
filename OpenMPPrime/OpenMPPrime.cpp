@@ -17,7 +17,10 @@ int main(int argc, char* argv[]) {
 
 	cout << "Primes OpenMP\n";
 	cout << "Number of processors available = " << omp_get_num_procs() << "\n";
-	omp_set_num_threads(4);
+	cout << "Enter number of threads = ";
+	int t;
+	cin >> t;
+	omp_set_num_threads(t);
 	cout << "Number of threads = " << omp_get_max_threads() << "\n";
 
 	tests();
